@@ -37,6 +37,10 @@
             margin-right: 20px;
             margin-bottom: 0; /* デフォルトのマージンをリセット */
         }
+        .instructor-name .emoji {
+            font-size: 0.5em; /* 絵文字を半分の大きさに */
+            vertical-align: middle; /* テキストと中央揃え */
+        }
         .instructor-title {
             font-size: 1.2em;
             color: #777;
@@ -50,6 +54,7 @@
             padding: 15px;
             text-align: left;
             white-space: pre-wrap; /* 改行を保持 */
+            border-radius: 10px; /* 角を丸くする */
         }
         .biography-text {
             width: 80%;
@@ -58,13 +63,31 @@
             text-align: left;
             white-space: pre-wrap; /* 改行を保持 */
         }
+
+        /* スマホ向けのスタイル */
+        @media (max-width: 600px) {
+            .instructor-info {
+                flex-direction: column; /* 名前と肩書きを縦に並べる */
+                align-items: center; /* 中央揃え */
+            }
+            .instructor-name {
+                margin-right: 0; /* 右マージンをなくす */
+                margin-bottom: 10px; /* 下マージンを追加して間隔を作る */
+            }
+            .instructor-title {
+                font-size: 1em; /* 少し小さくすると収まりやすい */
+            }
+            .description-box {
+                width: 90%; /* スマホでは幅を90%に */
+            }
+        }
     </style>
 </head>
 <body>
     <h1>講師紹介</h1>
 
     <div class="instructor-info">
-        <h2 class="instructor-name">うたみかん🍊🎤</h2>
+        <h2 class="instructor-name">うたみかん<span class="emoji">🍊🎤</span></h2>
         <p class="instructor-title">ボーカル教室ロマンツァ 代表・ボイストレーナー</p>
     </div>
 
