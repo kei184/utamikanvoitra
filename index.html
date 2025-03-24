@@ -4,11 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ロマンツァ予約</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff5e1;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img.logo {
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #ff9800;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #ff9800;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #e68900;
+        }
+        .privacy-link {
+            display: block;
+            margin-top: 20px;
+            color: #555;
+            text-decoration: none;
+        }
+        .privacy-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>ロマンツァ予約</h1>
-    <button onclick="window.open('https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec', '_blank', 'width=600,height=700');">  予約フォームを開く</button>
-<p><a href="https://kei184.github.io/utamikanvoitra/privacy.html">プライバシーポリシー</a></p>
+    <div class="container">
+        <img src="ロマンツァlogo1.png" alt="ロマンツァロゴ" class="logo">
+        <h1>ロマンツァ予約</h1>
+        <button class="btn" onclick="window.open('https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec', '_blank', 'width=600,height=700');">予約フォームを開く</button>
+        <a href="https://kei184.github.io/utamikanvoitra/privacy.html" class="privacy-link">プライバシーポリシー</a>
+    </div>
 </body>
 </html>
-
