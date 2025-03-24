@@ -3,64 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー</title>
+    <title>ロマンツァ予約</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            line-height: 1.6;
+            text-align: center;
+            background-color: #fff5e1;
+            margin: 0;
+            padding: 0;
         }
-        h1, h2 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .logo {
+            width: 250px;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .tile {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff9800;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+        .tile:hover {
+            background-color: #e68900;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        .footer a {
+            color: #333;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>プライバシーポリシー</h1>
-
-    <p>本プライバシーポリシーは、当教室の予約システム（以下、「本サービス」）において、ユーザーの個人情報をどのように収集・利用・管理するかを説明するものです。</p>
-
-    <h2>1. 収集する情報</h2>
-    <p>本サービスでは、以下の個人情報を収集する場合があります。</p>
-    <ul>
-        <li>名前</li>
-        <li>メールアドレス</li>
-        <li>予約日時</li>
-        <li>選択したレッスンコース</li>
-    </ul>
-
-    <h2>2. 個人情報の利用目的</h2>
-    <p>収集した個人情報は、以下の目的で利用します。</p>
-    <ul>
-        <li>予約管理および確認のため</li>
-        <li>予約完了の通知メール送信のため</li>
-        <li>必要に応じたお問い合わせ対応のため</li>
-    </ul>
-
-    <h2>3. 個人情報の管理</h2>
-    <p>当教室は、ユーザーの個人情報を適切に管理し、不正アクセス、紛失、漏えいなどを防止するために必要な対策を講じます。</p>
-
-    <h2>4. 個人情報の第三者提供</h2>
-    <p>以下の場合を除き、ユーザーの同意なく個人情報を第三者に提供することはありません。</p>
-    <ul>
-        <li>法令に基づく場合</li>
-        <li>ユーザーの同意がある場合</li>
-    </ul>
-
-    <h2>5. クッキー（Cookie）の使用</h2>
-    <p>本サービスでは、利便性向上のためクッキーを使用する場合があります。ユーザーはブラウザ設定によりクッキーを無効にすることができます。</p>
-
-    <h2>6. プライバシーポリシーの変更</h2>
-    <p>本プライバシーポリシーは、必要に応じて変更されることがあります。最新の内容は本サービス上に掲載されます。</p>
-
-    <h2>7. お問い合わせ</h2>
-    <p>本プライバシーポリシーに関するお問い合わせは、以下の連絡先までお願いいたします。</p>
-
-    <p><strong>ボーカル教室 ロマンツァ</strong></p>
-    <p>[お問い合わせメールアドレス]</p>
-    <p>morudibu@gmail.com</p>
+    <div class="container">
+        <img src="ロマンツァlogo1.png" alt="ロマンツァロゴ" class="logo">
+        <div class="grid">
+            <a href="/utamikanvoitra/about" class="tile">みかんのこと</a>
+            <a href="/utamikanvoitra/course" class="tile">コース</a>
+            <a href="/utamikanvoitra/map" class="tile">マップ</a>
+            <a href="https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec" class="tile">予約</a>
+        </div>
+        <div class="footer">
+            <a href="/utamikanvoitra/privacy.html">プライバシーポリシー</a>
+        </div>
+    </div>
 </body>
 </html>
