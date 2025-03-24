@@ -46,9 +46,33 @@
         .tile:hover {
             background-color: #e68900;
         }
-        /* .book-button {
+        .book-button {
             grid-column: 1 / -1; /* 横幅いっぱいに広げる */
-        /* } */
+            /* width: 50%; /* これを削除またはコメントアウト */
+            /* justify-self: center; /* これを削除またはコメントアウト */
+        }
+        .book-button-container {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+        }
+        .book-button-tile {
+            width: 50%; /* 他のボタンと同じ幅にするために調整 */
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff9800;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+        .book-button-tile:hover {
+            background-color: #e68900;
+        }
         .footer {
             margin-top: 40px;
             font-size: 0.9em;
@@ -70,7 +94,9 @@
             <a href="/utamikanvoitra/course" class="tile">コースの紹介</a>
             <a href="/utamikanvoitra/price" class="tile">料金</a>
             <a href="/utamikanvoitra/map" class="tile">各スタジオのMAP</a>
-            <a href="https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec" class="tile">ご予約</a>
+            <div class="book-button-container">
+                <a href="https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec" class="book-button-tile">予約</a>
+            </div>
         </div>
         <div class="footer">
             <a href="/utamikanvoitra/privacy">プライバシーポリシー</a>
