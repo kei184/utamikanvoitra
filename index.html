@@ -8,44 +8,44 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #fff7e6;
+            background-color: #fffaf0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         .logo {
-            width: 200px;
-            margin: 20px auto;
-            display: block;
+            width: 250px;
+            margin-bottom: 30px;
         }
         .container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            justify-content: center;
-            align-items: center;
-            max-width: 400px;
-            margin: 0 auto;
         }
         .tile {
-            width: 100px;
-            height: 100px;
-            background-color: #ffa500;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
+            width: 200px;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 10px;
+            background-color: #ff9800;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
             text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
         }
         .tile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #e68900;
         }
     </style>
 </head>
 <body>
-    <img src="ロマンツァlogo1.png" alt="ロマンツァ ロゴ" class="logo">
+    <img src="ロマンツァlogo1.png" alt="ロマンツァロゴ" class="logo">
     <div class="container">
         <a href="#" class="tile">みかんのこと</a>
         <a href="#" class="tile">コース</a>
