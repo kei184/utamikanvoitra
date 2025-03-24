@@ -37,31 +37,30 @@
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;
-            padding: 30px;
             text-align: center;
             width: 300px; /* PCでの幅の目安 */
             box-sizing: border-box;
+            overflow: hidden; /* 角丸を内側に収める */
         }
-        .pricing-item h2 {
+        .pricing-title-area {
+            background-color: #ffe0b2; /* 上側の色 */
+            padding: 15px;
+            border-bottom: 1px solid #eee; /* 区切り線（任意） */
+        }
+        .pricing-title-area h2 {
             font-size: 1.8em;
             color: #ff9800;
-            margin-top: 0;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            /* white-space: nowrap; */
-            background-color: #ffe0b2; /* 薄いオレンジ色 */
-            padding: 5px 15px; /* 少し調整 */
-            border-radius: 5px;
-            display: inline-block; /* 維持 */
-            line-height: 1; /* 行の高さを調整 */
-        }
-        .break-me {
-            display: inline-block; /* 幅を持たせる */
-            white-space: normal; /* 必要に応じて改行を許可 */
+            margin: 0;
+            text-align: center;
         }
         .pricing-item p {
-            margin-bottom: 10px;
+            background-color: #f9f9f9; /* 下側の色（例） */
+            padding: 10px 20px;
+            margin: 0; /* デフォルトのマージンをリセット */
+        }
+        .break-me {
+            display: inline-block;
+            white-space: normal;
         }
 
         /* スマホ向けのスタイル */
@@ -81,17 +80,23 @@
 
     <div class="pricing-container">
         <div class="pricing-item">
-            <h2>体験レッスン</h2>
+            <div class="pricing-title-area">
+                <h2>体験レッスン</h2>
+            </div>
             <p>60分</p>
             <p>2000円（スタジオ料込み）</p>
         </div>
         <div class="pricing-item">
-            <h2>マンツーマン<span class="break-me">レッスン</span></h2>
+            <div class="pricing-title-area">
+                <h2>マンツーマン<span class="break-me">レッスン</span></h2>
+            </div>
             <p>60分</p>
             <p>5000円（別途スタジオ料）</p>
         </div>
         <div class="pricing-item">
-            <h2>ペアレッスン</h2>
+            <div class="pricing-title-area">
+                <h2>ペアレッスン</h2>
+            </div>
             <p>60分</p>
             <p>4000円（別途スタジオ料）<br>※お一人の料金</p>
         </div>
