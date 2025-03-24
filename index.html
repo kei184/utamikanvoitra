@@ -8,36 +8,40 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #fffaf0;
+            background-color: #fff5e1;
             margin: 0;
+            padding: 0;
+        }
+        .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
+            margin-top: 20px;
         }
         .logo {
             width: 250px;
             margin-bottom: 30px;
         }
-        .container {
+        .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+            width: 80%;
+            max-width: 500px;
         }
         .tile {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            aspect-ratio: 1 / 1;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #ff9800;
             color: white;
-            font-size: 20px;
+            font-size: 1.5em;
             font-weight: bold;
             text-decoration: none;
             border-radius: 10px;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
         }
         .tile:hover {
             background-color: #e68900;
@@ -45,13 +49,14 @@
     </style>
 </head>
 <body>
-    <img src="ロマンツァlogo1.png" alt="ロマンツァロゴ" class="logo">
     <div class="container">
-        <a href="#" class="tile">みかんのこと</a>
-        <a href="#" class="tile">コース</a>
-        <a href="#" class="tile">マップ</a>
-        <a href="https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec" class="tile">予約</a>
+        <img src="ロマンツァlogo1.png" alt="ロマンツァロゴ" class="logo">
+        <div class="grid">
+            <a href="#" class="tile">みかんのこと</a>
+            <a href="#" class="tile">コース</a>
+            <a href="#" class="tile">マップ</a>
+            <a href="https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec" class="tile">予約</a>
+        </div>
     </div>
-    <p><a href="https://kei184.github.io/utamikanvoitra/privacy.html">プライバシーポリシー</a></p>
 </body>
 </html>
