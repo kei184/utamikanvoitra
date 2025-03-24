@@ -37,26 +37,26 @@
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;
-            padding: 30px;
             text-align: center;
             width: 300px; /* PCでの幅の目安 */
             box-sizing: border-box;
+            overflow: hidden; /* 角丸を内側に収める */
         }
-        .course-item h2 {
+        .course-title-area {
+            background-color: #ffe0b2; /* 上側の色 */
+            padding: 15px;
+            border-bottom: 1px solid #eee; /* 区切り線（任意） */
+        }
+        .course-title-area h2 {
             font-size: 1.8em;
             color: #ff9800;
-            margin-top: 0;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            background-color: #ffe0b2; /* 薄いオレンジ色 */
-            padding: 5px 15px; /* 少し調整 */
-            border-radius: 5px;
-            display: inline-block; /* 維持 */
-            line-height: 1; /* 行の高さを調整 */
+            margin: 0;
         }
         .course-item .content {
-            min-height: 100px; /* 後からテキストが入るスペースを確保 */
+            background-color: #f9f9f9; /* 下側の色（例） */
+            padding: 20px;
+            text-align: left;
+            min-height: 100px;
         }
 
         /* スマホ向けのスタイル */
@@ -76,17 +76,23 @@
 
     <div class="course-container">
         <div class="course-item">
-            <h2>体験レッスン</h2>
+            <div class="course-title-area">
+                <h2>体験レッスン</h2>
+            </div>
             <div class="content">
                 </div>
         </div>
         <div class="course-item">
-            <h2>マンツーマンレッスン</h2>
+            <div class="course-title-area">
+                <h2>マンツーマンレッスン</h2>
+            </div>
             <div class="content">
                 </div>
         </div>
         <div class="course-item">
-            <h2>ペアレッスン</h2>
+            <div class="course-title-area">
+                <h2>ペアレッスン</h2>
+            </div>
             <div class="content">
                 </div>
         </div>
