@@ -4,87 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ロマンツァ予約</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #fff5e1;
-            margin: 0;
-            padding: 0;
+<style>
+    body {
+        font-family: "Noto Sans JP", sans-serif;
+        background-color: #fff5e1;
+        color: #333;
+        margin: 40px auto;
+        padding: 30px;
+        line-height: 1.7;
+        max-width: 960px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 2.5em;
+        color: #222;
+        text-align: center;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        border-bottom: 3px solid #ff9800;
+    }
+    .instructor-info {
+        display: flex;
+        justify-content: center;
+        align-items: baseline; /* 名前と肩書きのベースラインを揃える */
+        margin-bottom: 20px;
+    }
+    .instructor-name {
+        font-size: 2.5em;
+        margin-right: 20px;
+        margin-bottom: 0; /* デフォルトのマージンをリセット */
+    }
+    .instructor-name .emoji {
+        font-size: 0.5em; /* 絵文字を半分の大きさに */
+        vertical-align: middle; /* テキストと中央揃え */
+    }
+    .instructor-title {
+        font-size: 1.2em;
+        color: #777;
+        margin-bottom: 5px; /* 少し下マージンをつける */
+    }
+    .description-box {
+        width: 85%; /* PCで30px広く */
+        max-width: 630px; /* PCで30px広く */
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        padding: 15px;
+        text-align: left;
+        white-space: pre-wrap; /* 改行を保持 */
+        border-radius: 10px; /* 角を丸くする */
+        min-height: 180px; /* テキストに合わせて少し高さを調整 */
+    }
+    .biography-text {
+        width: 85%; /* PCで30px広く */
+        max-width: 630px; /* PCで30px広く */
+        margin: 40px auto; /* 上マージンを少し増やしました */
+        text-align: left;
+        white-space: pre-wrap; /* 改行を保持 */
+    }
+
+    /* スマホ向けのスタイル */
+    @media (max-width: 600px) {
+        .instructor-info {
+            flex-direction: column; /* 名前と肩書きを縦に並べる */
+            align-items: center; /* 中央揃え */
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
+        .instructor-name {
+            margin-right: 0; /* 右マージンをなくす */
+            margin-bottom: 10px; /* 下マージンを追加して間隔を作る */
         }
-        .logo {
-            width: 250px;
-            margin-bottom: 30px;
+        .instructor-title {
+            font-size: 1em; /* 少し小さくすると収まりやすい */
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            width: 80%;
-            max-width: 500px;
+        .description-box {
+            width: 95%; /* スマホでは幅を95%に */
         }
-        .tile {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #ff9800;
-            color: white;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: background 0.3s;
+        .biography-text {
+            width: 95%; /* スマホでは幅を95%に */
         }
-        .tile:hover {
-            background-color: #e68900;
-        }
-        .book-button {
-            grid-column: 1 / -1; /* 横幅いっぱいに広げる */
-            /* width: 50%; /* これを削除またはコメントアウト */
-            /* justify-self: center; /* これを削除またはコメントアウト */
-        }
-        .book-button-container {
-            grid-column: 1 / -1;
-            display: flex;
-            justify-content: center;
-        }
-        .book-button-tile {
-            width: 50%; /* 他のボタンと同じ幅にするために調整 */
-            aspect-ratio: 1 / 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #ff9800;
-            color: white;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: background 0.3s;
-        }
-        .book-button-tile:hover {
-            background-color: #e68900;
-        }
-        .footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-        .footer a {
-            color: #333;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <div class="container">
