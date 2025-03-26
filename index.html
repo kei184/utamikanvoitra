@@ -81,9 +81,10 @@
             bottom: 5px;
             left: 50%;
             transform: translateX(-50%);
-            white-space: normal; /* テキストを折り返す */
-            word-break: break-all; /* 単語の途中で改行する */
-            max-width: 90%; /* ボタン幅に合わせて最大幅を設定 */
+            white-space: normal;
+            word-break: keep-all; /* 単語の途中で改行しない */
+            max-width: 90%;
+            line-height: 1.2; /* 行間を調整 */
         }
         .footer {
             margin-top: 40px;
@@ -109,7 +110,7 @@
             <div class="book-button-container">
                 <a href="https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec" class="book-button-tile">
                     ご予約
-                    <span>ご利用にはGoogleアカウントにログインが必要です。</span>
+                    <span>ご利用には<br>Googleアカウントにログインが必要です。</span>
                 </a>
             </div>
         </div>
