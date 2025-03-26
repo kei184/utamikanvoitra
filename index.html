@@ -58,7 +58,7 @@
             width: 50%;
             aspect-ratio: 1 / 1;
             display: flex;
-            flex-direction: column-reverse; /* テキストと注意書きの順序を逆にする */
+            flex-direction: column; /* テキストと注意書きを縦に並べる */
             align-items: center;
             justify-content: center;
             background-color: #ff9800;
@@ -75,7 +75,8 @@
         .book-button-tile span {
             font-size: 0.7em;
             font-weight: normal;
-            margin-bottom: 5px; /* 注意書きとボタンテキストの間にスペースを作る */
+            margin-top: 5px;
+            order: 2; /* 注意書きをボタン下部に移動 */
         }
         .footer {
             margin-top: 40px;
