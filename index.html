@@ -68,6 +68,7 @@
             text-decoration: none;
             border-radius: 10px;
             transition: background 0.3s;
+            position: relative; /* 注意書きの絶対配置の基準にする */
         }
         .book-button-tile:hover {
             background-color: #ffa500;
@@ -75,8 +76,10 @@
         .book-button-tile span {
             font-size: 0.7em;
             font-weight: normal;
-            margin-top: 5px;
-            order: 2; /* 注意書きをボタン下部に移動 */
+            position: absolute; /* 絶対配置にする */
+            bottom: 5px; /* ボタン下部に配置 */
+            left: 50%; /* 中央に配置 */
+            transform: translateX(-50%); /* 中央に配置 */
         }
         .footer {
             margin-top: 40px;
