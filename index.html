@@ -69,7 +69,7 @@
             border-radius: 10px;
             transition: background 0.3s;
             position: relative;
-            line-height: 1.2; /* 行間を調整 */
+            line-height: 1.2;
         }
         .book-button-tile:hover {
             background-color: #ffa500;
@@ -81,7 +81,9 @@
             bottom: 5px;
             left: 50%;
             transform: translateX(-50%);
-            white-space: nowrap; /* テキストを折り返さない */
+            white-space: normal; /* テキストを折り返す */
+            word-break: break-all; /* 単語の途中で改行する */
+            max-width: 90%; /* ボタン幅に合わせて最大幅を設定 */
         }
         .footer {
             margin-top: 40px;
