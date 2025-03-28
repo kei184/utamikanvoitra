@@ -192,14 +192,17 @@ document.getElementById('bookingButton').addEventListener('click', function (eve
             iframe.onload = function() {
                 iframe.contentWindow.location.href = 'https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec';
 
-                setTimeout(function() {
-                    iframe.contentDocument.body.style.transform = 'scale(0.7) !important';
-                    iframe.contentDocument.body.style.transformOrigin = 'top left !important';
-                    iframe.contentDocument.body.style.webkitTransform = 'scale(0.7) !important';
-                    iframe.contentDocument.body.style.webkitTransformOrigin = 'top left !important';
-                    iframe.contentDocument.body.style.msTransform = 'scale(0.7) !important';
-                    iframe.contentDocument.body.style.msTransformOrigin = 'top left !important';
-                }, 500);
+                var intervalId = setInterval(function() {
+                    if (iframe.contentDocument && iframe.contentDocument.body) {
+                        clearInterval(intervalId);
+                        iframe.contentDocument.body.style.transform = 'scale(0.7) !important';
+                        iframe.contentDocument.body.style.transformOrigin = 'top left !important';
+                        iframe.contentDocument.body.style.webkitTransform = 'scale(0.7) !important';
+                        iframe.contentDocument.body.style.webkitTransformOrigin = 'top left !important';
+                        iframe.contentDocument.body.style.msTransform = 'scale(0.7) !important';
+                        iframe.contentDocument.body.style.msTransformOrigin = 'top left !important';
+                    }
+                }, 100);
             };
         };
     } else {
