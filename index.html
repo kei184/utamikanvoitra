@@ -175,15 +175,40 @@
         </div>
     </div>
 <script>
+    // ボタンがクリックされた時のイベント
     document.getElementById('bookingButton').addEventListener('click', function (event) {
         // デフォルトのリンク遷移を防止
         event.preventDefault();
 
         // PC環境かつiPadでない場合新しいウィンドウを開く
         if (window.innerWidth > 768 && !navigator.userAgent.includes('iPad')) {
-            // 新しいウィンドウでコンテンツを直接表示（CORSの問題を避けます）
-            var newWindow = window.open('https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec', '_blank', 'width=900,height=600');
-            newWindow.focus(); // 新しいウィンドウにフォーカスを与えます
+            // 新しいウィンドウを開く
+            var newWindow = window.open('', '_blank', 'width=900,height=600');
+            
+            // 新しいウィンドウに内容を追加
+            newWindow.document.write(`
+                <html>
+                <head>
+                    <style>
+                        body {
+                            transform: scale(0.7); /* 70%にスケール */
+                            transform-origin: top left; /* スケールの起点を左上に設定 */
+                            width: 142.857%; /* 100% / 0.7 = 142.857% */
+                            height: auto; /* コンテンツの高さは自動 */
+                            margin: 0;
+                            padding: 0; /* 余白を削除 */
+                        }
+                    </style>
+                </head>
+                <body>
+                    <iframe src="https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec" 
+                        style="width: 100%; height: 100%; border: none;"></iframe>
+                </body>
+                </html>
+            `);
+
+            newWindow.document.close(); // ドキュメントをクローズして描画を開始
+            newWindow.focus(); // 新しいウィンドウにフォーカスを与え
         } else {
             // モバイル環境またはiPadの場合は通常のリンク遷移
             window.location.href = 'https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec';
