@@ -187,11 +187,11 @@ document.getElementById('bookingButton').addEventListener('click', function (eve
             iframe.style.width = '100%';
             iframe.style.height = '100%';
             iframe.style.border = 'none';
+            iframe.src = 'https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec';
+            iframe.sandbox = 'allow-same-origin allow-scripts allow-popups allow-forms';
             newWindow.document.body.appendChild(iframe);
 
             iframe.onload = function() {
-                iframe.contentWindow.location.href = 'https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec';
-
                 var intervalId = setInterval(function() {
                     if (iframe.contentDocument && iframe.contentDocument.body) {
                         clearInterval(intervalId);
@@ -207,29 +207,6 @@ document.getElementById('bookingButton').addEventListener('click', function (eve
 
             iframe.onerror = function(event) {
                 console.error('iframeの読み込みエラー:', event);
-            };
-        };
-    } else {
-        // モバイル環境またはiPadの場合は通常のリンク遷移
-        window.location.href = 'https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec';
-    }
-});
-        document.getElementById('bookingButton').addEventListener('click', function (event) {
-    // デフォルトのリンク遷移を防止
-    event.preventDefault();
-
-    // PC環境かつiPadでない場合のみ新しいウィンドウを開く
-    if (window.innerWidth > 768 && !navigator.userAgent.includes('iPad')) {
-        var newWindow = window.open('about:blank', '_blank', 'width=600,height=400');
-        newWindow.onload = function() {
-            var iframe = newWindow.document.createElement('iframe');
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.border = 'none';
-            newWindow.document.body.appendChild(iframe);
-
-            iframe.onload = function() {
-                iframe.contentWindow.document.body.innerHTML = '<h1>テスト</h1>';
             };
         };
     } else {
