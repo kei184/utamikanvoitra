@@ -12,22 +12,30 @@
         body {
             font-family: "Noto Sans JP", Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f9; /* 一つ前の提案の明るい背景色 */
+            background-color: #f4f4f9; 
             margin: 0;
             padding: 0;
             color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            box-sizing: border-box;
         }
 
         .logo {
-            width: 425px;
-            max-width: 90%;
+            width: 300px;
+            max-width: 80%;
             margin-bottom: 30px;
             transition: transform 0.3s, opacity 0.3s;
         }
@@ -41,8 +49,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            width: 80%;
-            max-width: 500px;
+            width: 100%;
         }
 
         .tile {
@@ -61,7 +68,7 @@
         }
 
         .tile:hover {
-            background-color: #ffc107; /* 明るい黄色に変更 */
+            background-color: #ffc107;
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
@@ -92,7 +99,7 @@
         }
 
         .book-button-tile:hover {
-            background-color: #ffc107; /* 明るい黄色に変更 */
+            background-color: #ffc107;
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
