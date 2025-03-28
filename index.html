@@ -175,22 +175,26 @@
         </div>
     </div>
     <script>
-        document.getElementById('bookingButton').addEventListener('click', function (event) {
-            // デフォルトのリンク遷移を防止
-            event.preventDefault();
+document.getElementById('bookingButton').addEventListener('click', function (event) {
+    // デフォルトのリンク遷移を防止
+    event.preventDefault();
 
-            // PC環境かつiPadでない場合のみ新しいウィンドウを開く
-            if (window.innerWidth > 768 && !navigator.userAgent.includes('iPad')) {
-                var newWindow = window.open('https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec', '_blank', 'width=600,height=400');
-                newWindow.onload = function() {
-                    newWindow.document.body.style.transform = 'scale(0.7)';
-                    newWindow.document.body.style.transformOrigin = 'top left';
-                };
-            } else {
-                // モバイル環境またはiPadの場合は通常のリンク遷移
-                window.location.href = 'https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec';
-            }
+    // PC環境かつiPadでない場合のみ新しいウィンドウを開く
+    if (window.innerWidth > 768 && !navigator.userAgent.includes('iPad')) {
+        var newWindow = window.open('https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec', '_blank', 'width=600,height=400');
+        newWindow.addEventListener('DOMContentLoaded', function() {
+            newWindow.document.body.style.transform = 'scale(0.7) !important';
+            newWindow.document.body.style.transformOrigin = 'top left !important';
+            newWindow.document.body.style.webkitTransform = 'scale(0.7) !important';
+            newWindow.document.body.style.webkitTransformOrigin = 'top left !important';
+            newWindow.document.body.style.msTransform = 'scale(0.7) !important';
+            newWindow.document.body.style.msTransformOrigin = 'top left !important';
         });
+    } else {
+        // モバイル環境またはiPadの場合は通常のリンク遷移
+        window.location.href = 'https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec';
+    }
+});
     </script>
     <script src="/utamikanvoitra/app-check.js"></script>
 </body>
