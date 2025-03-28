@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,28 +12,40 @@
         body {
             font-family: "Noto Sans JP", Arial, sans-serif;
             text-align: center;
-            background-color: #fff5e1;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
+            color: #333;
         }
+
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 20px;
+            margin: 20px 0;
         }
+
         .logo {
-            width: 425px;
+            width: 300px;
+            max-width: 80%;
             margin-bottom: 30px;
+            transition: transform 0.3s, opacity 0.3s;
         }
+        
+        .logo:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 20px;
-            width: 80%;
-            max-width: 500px;
+            width: 90%;
+            max-width: 600px;
         }
-        .tile {
+
+        .tile, .book-button-tile {
             width: 100%;
             aspect-ratio: 1 / 1;
             display: flex;
@@ -40,58 +53,55 @@
             justify-content: center;
             background-color: #ff9800;
             color: white;
-            font-size: 1.5em;
+            font-size: 1.3em;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 10px;
-            transition: background 0.3s;
+            border-radius: 12px;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
-        .tile:hover {
-            background-color: #ffa500;
+
+        .tile:hover, .book-button-tile:hover {
+            background-color: #e68900;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
         .book-button-container {
             grid-column: 1 / -1;
             display: flex;
-            flex-direction: column; /* 追加 */
-            align-items: center; /* 追加 */
-            justify-content: center;
-        }
-        .book-button-tile {
-            width: 50%;
-            aspect-ratio: 1 / 1;
-            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #ff9800;
-            color: white;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: background 0.3s;
-            line-height: 1.2;
-            padding: 10px; /* パディングを調整 */
+            gap: 10px;
         }
-        .book-button-tile:hover {
-            background-color: #ffa500;
-        }
+        
         .book-button-note {
             font-size: 0.8em;
-            margin-top: 5px; /* ボタンとの間隔を調整 */
+            color: #666;
         }
+
         .footer {
             margin-top: 40px;
             font-size: 0.9em;
         }
+
         .footer a {
             color: #333;
             text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color 0.3s, border-color 0.3s;
         }
+
         .footer a:hover {
-            text-decoration: underline;
+            color: #ff9800;
+            border-color: #ff9800;
         }
+
     </style>
 </head>
+
 <body>
     <div class="container">
         <img src="ロマンツァlogo1.png" alt="ロマンツァロゴ" class="logo">
@@ -113,4 +123,5 @@
     </div>
     <script src="/utamikanvoitra/app-check.js"></script>
 </body>
+
 </html>
