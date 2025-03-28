@@ -12,7 +12,7 @@
         body {
             font-family: "Noto Sans JP", Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f9; 
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
             color: #333;
@@ -32,7 +32,6 @@
             width: 90%;
             max-width: 600px;
             box-sizing: border-box;
-            overflow: hidden;
         }
 
         .logo {
@@ -49,14 +48,12 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
             width: 100%;
         }
 
         .tile {
-            width: 100%;
-            aspect-ratio: 1 / 1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,6 +64,7 @@
             text-decoration: none;
             border-radius: 10px;
             transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            height: 100px; /* 統一した高さ */
         }
 
         .tile:hover {
@@ -77,14 +75,9 @@
 
         .book-button-container {
             grid-column: 1 / -1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .book-button-tile {
-            width: 100%; /* 他のタイルと同様の幅を設定 */
-            aspect-ratio: 1 / 1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -95,6 +88,7 @@
             text-decoration: none;
             border-radius: 10px;
             transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            height: 100px; /* 他のボタンと同じ高さに */
         }
 
         .book-button-tile:hover {
@@ -130,14 +124,11 @@
             .logo {
                 width: 250px;
             }
-            
+
             .tile, .book-button-tile {
                 font-size: 1.2em;
-                aspect-ratio: auto;
-                height: 120px;
-                margin-bottom: 10px;
             }
-            
+
             .container {
                 padding: 20px;
             }
