@@ -14,12 +14,12 @@ body {
     background-color: #f4f4f9;
     color: #333;
     margin: 0;
-    padding: 30px 0 0 0; /* 上に30px、左右と下は0のパディングを設定 */
+    padding: 30px 0 0 0; /* 上に30pxのパディング */
     line-height: 1.7;
     display: flex; /* フレックスボックス */
     justify-content: center; /* 水平方向にセンタリング */
-    align-items: center; /* 垂直方向にセンタリング */
-    height: calc(90vh - 30px); /* ビューポートの高さに上のパディング分を引いた高さを設定 */
+    align-items: flex-start; /* 垂直方向に上部に揃える */
+    min-height: 100vh; /* 最小高さをビューポートの高さに設定 */
 }
 
 .container {
