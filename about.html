@@ -26,7 +26,7 @@
             background-color: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            text-align: center; /* ヘッダーを中央揃えのままにします */
+            text-align: center; /* コンテナ内は中央揃え */
         }
 
         h1 {
@@ -39,16 +39,16 @@
         }
 
         .instructor-info {
-            display: flex;
-            justify-content: center;
-            align-items: baseline;
+            display: flex; 
+            justify-content: center; /* 水平方向にセンタリング */
+            align-items: baseline; /* 基準線を合わせる */
             margin-bottom: 20px;
         }
 
         .instructor-name {
             font-size: 2.5em;
             margin-right: 20px;
-            margin-bottom: 0;
+            margin-bottom: 0; 
             white-space: nowrap; /* 改行を防ぐ */
         }
 
@@ -109,7 +109,7 @@
 
         @media (max-width: 600px) {
             .instructor-info {
-                flex-direction: column;
+                flex-direction: column; /* スマホ向け：縦に配置 */
                 align-items: center;
             }
 
