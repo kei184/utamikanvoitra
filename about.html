@@ -25,7 +25,7 @@
             background-color: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left; /* テキストを左詰めに */
         }
 
         h1 {
@@ -34,6 +34,7 @@
             padding-bottom: 15px;
             margin-bottom: 30px;
             border-bottom: 3px solid #ff9800;
+            text-align: center; /* ヘッダーは中央揃え */
         }
 
         .instructor-info {
@@ -58,6 +59,7 @@
             font-size: 1.2em;
             color: #777;
             margin-bottom: 5px;
+            white-space: nowrap; /* 改行を防ぐ */
         }
 
         .description-box {
@@ -67,10 +69,10 @@
             border: 1px solid #ccc;
             padding: 15px;
             text-align: left;
-            white-space: pre-wrap;
+            white-space: pre-wrap; /* 改行を保持 */
             border-radius: 15px;
             min-height: 180px;
-            background-color: #fff; /* 背景色を白に変更 */
+            background-color: #fff;
         }
 
         .biography-text {
@@ -91,6 +93,7 @@
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: color 0.3s, border-color 0.3s;
+            margin-right: 10px; /* リンク間のスペースを追加 */
         }
 
         .footer a:hover {
@@ -115,7 +118,7 @@
 
             .description-box,
             .biography-text {
-                width: 95%;
+                width: 95%; /* スマホでは幅を95%に */
             }
         }
     </style>
