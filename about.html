@@ -68,29 +68,27 @@ body {
             white-space: nowrap; /* 改行を防ぐ */
         }
 
-        .description-box {
-            width: 95%;
-            max-width: 650px;
-            margin: 5px auto;
-            border: 1px solid #ccc;
-            padding: 15px;
-            text-align: left; /* テキストを左詰めにする */
-            white-space: pre-line; /* 改行を保持しつつ、字下げを無くす */
-            border-radius: 15px;
-            min-height: 180px;
-            background-color: #fff;
-            margin-bottom: 0; /* 下マージンをなくす */
-        }
+.description-box {
+    width: 90%; /* 幅を90%に変更 */
+    max-width: none; /* 最大幅を無制限に設定 */
+    margin: 10px auto; /* 上下に10px、左右は自動でセンタリング */
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: left; /* テキストを左詰めにする */
+    white-space: pre-line; /* 改行を保持しつつ、字下げを無くす */
+    border-radius: 15px;
+    min-height: 180px;
+    background-color: #fff;
+}
 
-        .biography-text {
-            width: 85%;
-            max-width: 630px;
-            margin: 40px auto;
-            text-align: left; /* テキストを左詰めにする */
-            white-space: pre-line; /* 改行を保持しつつ、字下げを無くす */
-            margin-top: 0; /* 上マージンをなくす */
-            margin-bottom: 0; /* 下マージンをなくす */
-        }
+/* biography-textも同様に修正 */
+.biography-text {
+    width: 90%; /* 幅を90%に変更 */
+    max-width: none; /* 最大幅を無制限に設定 */
+    margin: 10px auto; /* 上下に10px、左右は自動でセンタリング */
+    text-align: left; /* テキストを左詰めにする */
+    white-space: pre-line; /* 改行を保持しつつ、字下げを無くす */
+}
 
         .footer {
             margin-top: 20px;
