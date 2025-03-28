@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,60 +10,109 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: "Noto Sans JP", sans-serif;
-            background-color: #fff5e1; /* 参考サイトの背景色 */
+            font-family: "Noto Sans JP", Arial, sans-serif;
+            background-color: #f4f4f9; /* 統一された背景色 */
             color: #333;
-            margin: 40px auto;
-            padding: 30px;
-            line-height: 1.7;
-            max-width: 960px;
+            margin: 0;
+            padding: 30px 0; /* 上下パディング */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* 中央配置 */
+            min-height: 100vh; /* ビューポートの高さ */
+            overflow: auto;
         }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 960px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
         h1 {
             font-size: 2.5em;
             color: #222;
-            text-align: center;
             padding-bottom: 15px;
             margin-bottom: 30px;
-            border-bottom: 3px solid #ff9800; /* 参考サイトのメインカラー */
+            border-bottom: 3px solid #ff9800; /* メインカラー */
         }
+
         h2 {
             font-size: 1.8em;
             color: #222;
             padding-bottom: 10px;
             margin-top: 30px;
             margin-bottom: 20px;
-            border-bottom: 2px solid #ccc;
+            border-bottom: 2px solid #ccc; /* サブタイトル用の区切り線 */
         }
+        
         iframe {
             width: 100%; /* レスポンシブ対応 */
             max-width: 600px; /* 最大幅を設定 */
             height: 350px;
-            border: 1px solid #ccc;
+            border: 1px solid #ccc; /* フレームのスタイル */
             margin-bottom: 15px;
         }
+
         small a {
-            color: #007bff;
+            color: #007bff; /* リンク色 */
             text-decoration: none;
         }
+
         small a:hover {
-            text-decoration: underline;
+            text-decoration: underline; /* ホバー時のスタイル */
         }
+
         .map-container {
-            margin-bottom: 40px;
+            margin-bottom: 40px; /* 各マップの間隔 */
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #ff9800;
+            border-color: #ff9800;
         }
     </style>
 </head>
+
 <body>
-    <h1>各スタジオのMAP</h1>
+    <div class="container">
+        <h1>各スタジオのMAP</h1>
 
-    <div class="map-container">
-        <h2>音楽貸しスタジオ アルル（東京）</h2>
-        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=139.70043450593948%2C35.72055495081542%2C139.70377653837204%2C35.72475328404835&amp;layer=mapnik&amp;marker=35.722654145086935%2C139.70210552215576" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=35.722654&amp;mlon=139.702106#map=19/35.722654/139.702106">大きな地図を表示</a></small>
-    </div>
+        <div class="map-container">
+            <h2>音楽貸しスタジオ アルル（東京）</h2>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=139.70043450593948%2C35.72055495081542%2C139.70377653837204%2C35.72475328404835&amp;layer=mapnik&amp;marker=35.722654145086935%2C139.70210552215576"></iframe>
+            <br />
+            <small><a href="https://www.openstreetmap.org/?mlat=35.722654&amp;mlon=139.702106#map=19/35.722654/139.702106">大きな地図を表示</a></small>
+        </div>
 
-    <div class="map-container">
-        <h2>サウンドスタジオ イフ（埼玉）</h2>
-        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=139.8316186666489%2C35.819792342883595%2C139.83496069908145%2C35.823985440428984&amp;layer=mapnik&amp;marker=35.82188891934332%2C139.83328968286514" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=35.821889&amp;mlon=139.833290#map=19/35.821889/139.833290">大きな地図を表示</a></small>
+        <div class="map-container">
+            <h2>サウンドスタジオ イフ（埼玉）</h2>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=139.8316186666489%2C35.819792342883595%2C139.83496069908145%2C35.823985440428984&amp;layer=mapnik&amp;marker=35.82188891934332%2C139.83328968286514"></iframe>
+            <br />
+            <small><a href="https://www.openstreetmap.org/?mlat=35.821889&amp;mlon=139.833290#map=19/35.821889/139.833290">大きな地図を表示</a></small>
+        </div>
+
+        <div class="footer">
+            <a href="/utamikanvoitra/index">ホーム</a> | 
+            <a href="/utamikanvoitra/privacy">プライバシーポリシー</a>
+        </div>
     </div>
 </body>
+
 </html>
