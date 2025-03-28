@@ -204,6 +204,10 @@ document.getElementById('bookingButton').addEventListener('click', function (eve
                     }
                 }, 100);
             };
+
+            iframe.onerror = function(event) {
+                console.error('iframeの読み込みエラー:', event);
+            };
         };
     } else {
         // モバイル環境またはiPadの場合は通常のリンク遷移
