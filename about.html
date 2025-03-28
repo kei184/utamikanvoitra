@@ -1,111 +1,153 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>講師紹介</title>
+    <title>ボーカル教室ロマンツァ - 講師紹介</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: "Noto Sans JP", sans-serif;
-            background-color: #fff5e1;
+            background-color: #f4f4f9;
             color: #333;
-            margin: 15px auto;
-            padding: 15px;
+            margin: 0;
+            padding: 0;
             line-height: 1.7;
+        }
+
+        .container {
             max-width: 960px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
         h1 {
             font-size: 2.5em;
             color: #222;
-            text-align: center;
             padding-bottom: 15px;
             margin-bottom: 30px;
             border-bottom: 3px solid #ff9800;
         }
+
         .instructor-info {
             display: flex;
             justify-content: center;
-            align-items: baseline; /* 名前と肩書きのベースラインを揃える */
+            align-items: baseline;
             margin-bottom: 20px;
         }
+
         .instructor-name {
             font-size: 2.5em;
             margin-right: 20px;
-            margin-bottom: 0; /* デフォルトのマージンをリセット */
+            margin-bottom: 0;
         }
+
         .instructor-name .emoji {
-            font-size: 0.5em; /* 絵文字を半分の大きさに */
-            vertical-align: middle; /* テキストと中央揃え */
+            font-size: 0.5em;
+            vertical-align: middle;
         }
+
         .instructor-title {
             font-size: 1.2em;
             color: #777;
-            margin-bottom: 5px; /* 少し下マージンをつける */
-        }
-        .description-box {
-            width: 95%; /* PCで30px広く */
-            max-width: 650px; /* PCで30px広く */
-            margin: 5px auto;
-            border: 1px solid #ccc;
-            padding: 5px;
-            text-align: left;
-            white-space: pre-wrap; /* 改行を保持 */
-            border-radius: 15px; /* 角を丸くする */
-            min-height: 180px; /* テキストに合わせて少し高さを調整 */
-        }
-        .biography-text {
-            width: 85%; /* PCで30px広く */
-            max-width: 630px; /* PCで30px広く */
-            margin: 40px auto; /* 上マージンを少し増やしました */
-            text-align: left;
-            white-space: pre-wrap; /* 改行を保持 */
+            margin-bottom: 5px;
         }
 
-        /* スマホ向けのスタイル */
+        .description-box {
+            width: 95%;
+            max-width: 650px;
+            margin: 5px auto;
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: left;
+            white-space: pre-wrap;
+            border-radius: 15px;
+            min-height: 180px;
+            background-color: #fff; /* 背景色を白に変更 */
+        }
+
+        .biography-text {
+            width: 85%;
+            max-width: 630px;
+            margin: 40px auto;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #ff9800;
+            border-color: #ff9800;
+        }
+
         @media (max-width: 600px) {
             .instructor-info {
-                flex-direction: column; /* 名前と肩書きを縦に並べる */
-                align-items: center; /* 中央揃え */
+                flex-direction: column;
+                align-items: center;
             }
+
             .instructor-name {
-                margin-right: 0; /* 右マージンをなくす */
-                margin-bottom: 10px; /* 下マージンを追加して間隔を作る */
+                margin-right: 0;
+                margin-bottom: 10px;
             }
+
             .instructor-title {
-                font-size: 1em; /* 少し小さくすると収まりやすい */
+                font-size: 1em;
             }
-            .description-box {
-                width: 95%; /* スマホでは幅を95%に */
-            }
+
+            .description-box,
             .biography-text {
-                width: 95%; /* スマホでは幅を95%に */
+                width: 95%;
             }
         }
     </style>
 </head>
+
 <body>
-    <h1>講師紹介</h1>
+    <div class="container">
+        <h1>講師紹介</h1>
 
-    <div class="instructor-info">
-        <h2 class="instructor-name">うたみかん<span class="emoji">🍊🎤</span></h2>
-        <p class="instructor-title">ボーカル教室ロマンツァ 代表・ボイストレーナー</p>
-    </div>
+        <div class="instructor-info">
+            <h2 class="instructor-name">うたみかん<span class="emoji">🍊🎤</span></h2>
+            <p class="instructor-title">ボーカル教室ロマンツァ 代表・ボイストレーナー</p>
+        </div>
 
-    <div class="description-box">
-        年齢を問わず、どんな方でも気軽にお通いいただけるボーカル教室です。<br>
-        発声練習は真剣に向き合うと、人生を変えてくれます。<br>
-        ボイストレーナーを始めて9年になりますが、どんな人でもレッスンの回数を重ねるたび、どんどん歌声が変化していきます。<br>
-        お一人お一人の目的に寄り添い、貴方の歌声を磨くサポートをさせていただきます。<br>
-    </div>
+        <div class="description-box">
+            年齢を問わず、どんな方でも気軽にお通いいただけるボーカル教室です。<br>
+            発声練習は真剣に向き合うと、人生を変えてくれます。<br>
+            ボイストレーナーを始めて9年になりますが、どんな人でもレッスンの回数を重ねるたび、どんどん歌声が変化していきます。<br>
+            お一人お一人の目的に寄り添い、貴方の歌声を磨くサポートをさせていただきます。<br>
+        </div>
 
-    <div class="biography-text">
-        武蔵野音楽大学声楽科卒業／ミュージカルアカデミー（02期）卒業<br>
-        ボイストレーナー歴9年<br>
-        ミュージカルアカデミー（旧東宝ミュージカルアカデミー）卒業後は俳優として舞台、映画に出演。主演映画の主題歌も歌唱。<br>
+        <div class="biography-text">
+            武蔵野音楽大学声楽科卒業／ミュージカルアカデミー（02期）卒業<br>
+            ボイストレーナー歴9年<br>
+            ミュージカルアカデミー（旧東宝ミュージカルアカデミー）卒業後は俳優として舞台、映画に出演。主演映画の主題歌も歌唱。<br>
+        </div>
+
+        <div class="footer">
+            <a href="/utamikanvoitra/index">トップページに戻る</a>
+            <a href="/utamikanvoitra/privacy">プライバシーポリシー</a>
+        </div>
     </div>
 </body>
+
 </html>
