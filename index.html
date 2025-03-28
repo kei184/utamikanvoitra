@@ -189,23 +189,23 @@
                 iframe.style.border = 'none';
                 newWindow.document.body.appendChild(iframe);
 
-                fetch('https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec')
-                    .then(response => response.text())
-                    .then(html => {
-                        iframe.srcdoc = html;
+                // 直接新しいウィンドウで表示するためのテスト
+                iframe.src = 'https://script.google.com/macros/s/AKfycbwGI-CNTMkT7lJPtCDA8rugTPNBSlAvbwRkSYE2v8e5LC3pikIW9oqi4vhQ2VymGpZV/exec';
 
-                        iframe.onload = function() {
-                            // スケールを適用するため、新しいスタイルを適用
-                            var body = iframe.contentDocument.body;
+                iframe.onload = function() {
+                    // スケールを適用するための処理をここに置くと、iframeが空の時に発生する可能性があるためチェックを行う
+                    try {
+                        var body = iframe.contentDocument.body;
+                        if (body) {
                             body.style.transform = 'scale(0.7)';
                             body.style.transformOrigin = '0 0';
                             body.style.width = '142.857%'; // 100% / 0.7 = 142.857%
-                        };
-                    })
-                    .catch(error => console.error('iframeのコンテンツ取得エラー:', error));
-
-                iframe.onerror = function(event) {
-                    console.error('iframeの読み込みエラー:', event);
+                        } else {
+                            console.error('iframeのbodyが取得できませんでした。');
+                        }
+                    } catch (err) {
+                        console.error('iframe内でのエラー:', err);
+                    }
                 };
             };
         } else {
