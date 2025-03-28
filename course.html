@@ -17,8 +17,8 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start; /* align-itemsをflex-startに変更して上に詰める */
+            height: 100vh; /* ビューポート全体の高さ */
             overflow: auto;
         }
 
@@ -44,8 +44,8 @@
 
         .course-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column; /* 縦に並べる */
+            align-items: center; /* 中央に寄せる */
             gap: 20px;
             margin-bottom: 40px;
         }
@@ -97,13 +97,8 @@
         }
 
         @media (max-width: 600px) {
-            .course-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
             .course-item {
-                width: 90%;
+                width: 90%; /* スマホでの幅を調整 */
             }
         }
     </style>
@@ -124,7 +119,7 @@
             </div>
             <div class="course-item">
                 <div class="course-title-area">
-                    <h2>マンツーマン<br>レッスン</h2> <!-- 改行を追加 -->
+                    <h2>マンツーマン<br>レッスン</h2> <!-- 改行 -->
                 </div>
                 <div class="content">
                     <p>個別のニーズに合わせたレッスンを提供します。<br>しっかりとした指導で上達をサポート。</p>
