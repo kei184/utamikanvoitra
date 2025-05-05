@@ -30,12 +30,13 @@
 
     .icon-row {
       position: absolute;
-      bottom: 30px; /* アイコンが画像の中に重なるように調整 */
+      bottom: 30px; /* 重なり具合の調整 */
       left: 50%;
       transform: translateX(-50%);
       display: flex;
-      justify-content: center;
-      gap: 28px;
+      justify-content: space-between;
+      width: 85%; /* ← 白背景と同じ程度の横幅に制限 */
+      max-width: 600px;
     }
 
     .icon-link {
@@ -46,19 +47,25 @@
       color: #333;
       font-weight: bold;
       font-size: 0.9rem;
+      flex: 1; /* 均等に広がる */
     }
 
     .icon-link img {
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       margin-bottom: 6px;
     }
 
     @media (max-width: 600px) {
-      .icon-link img {
-        width: 48px;
-        height: 48px;
+      .icon-row {
+        width: 90%;
       }
+
+      .icon-link img {
+        width: 56px;
+        height: 56px;
+      }
+
       .icon-link {
         font-size: 0.8rem;
       }
@@ -67,10 +74,8 @@
 </head>
 <body>
   <div class="container">
-    <!-- 背景イラスト -->
     <img src="romanza_no_icons.png" alt="ボーカル教室ロマンツァ" class="header-img" />
 
-    <!-- 重ねるアイコン -->
     <div class="icon-row">
       <a href="/utamikanvoitra/about" class="icon-link">
         <img src="icon_teacher.png" alt="講師紹介" />
