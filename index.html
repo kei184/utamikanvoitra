@@ -20,6 +20,9 @@
       position: relative;
       width: 100%;
       max-width: 768px;
+      border-radius: 20px;       /* ◯ コンテナに角丸を追加 */
+      overflow: hidden;          /* ◯ 中の画像や要素がはみ出ないように */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 任意：軽い影 */
     }
 
     .header-img {
@@ -30,14 +33,14 @@
 
     .icon-row {
       position: absolute;
-      top: 600px; /* マイク下に配置（微調整OK） */
+      top: 600px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       justify-content: space-between;
       width: 85%;
       max-width: 600px;
-      background-color: #FEEEC6; /* ← ボーカル教室ロマンツァの背景と同じ色 */
+      background-color: #FEEEC6;
       border-radius: 12px;
       padding: 10px 0px;
       box-sizing: border-box;
