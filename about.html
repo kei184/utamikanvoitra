@@ -10,101 +10,79 @@
   <style>
     body {
       font-family: "Noto Sans JP", sans-serif;
-      color: #333;
+      color: #5c4033;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: url("/utamikanvoitra/images/instructor_background.png") no-repeat center center fixed;
+      background: url("/utamikanvoitra/images/instructor_background.png") no-repeat center top;
       background-size: cover;
     }
 
     .container {
       width: 90%;
       max-width: 768px;
-      padding: 20px;
-      background-color: rgba(255, 243, 235, 0.9);
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      padding: 40px 20px;
+      background-color: transparent;
       text-align: center;
-      position: relative;
     }
 
     h1 {
-      font-size: 2.5em;
-      color: #5c4033;
-      padding-bottom: 15px;
-      margin-bottom: 30px;
-      border-bottom: 3px solid #ff9800;
-    }
-
-    .instructor-info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
+      font-size: 3em;
+      margin: 20px 0 10px;
     }
 
     .instructor-name {
-      font-size: 2em;
-      margin: 0;
-    }
-
-    .instructor-name .emoji {
-      font-size: 0.8em;
-      vertical-align: middle;
+      font-size: 2.5em;
+      margin: 20px 0 10px;
     }
 
     .instructor-title {
-      font-size: 1.1em;
-      color: #777;
-      margin: 5px 0 0;
+      font-size: 1.3em;
+      margin-bottom: 30px;
     }
 
     .description-box, .biography-text {
-      width: 90%;
-      margin: 15px auto;
-      padding: 15px;
-      border-radius: 15px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      text-align: left;
+      font-size: 1.1em;
+      margin: 0 auto 20px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      text-align: center;
       white-space: pre-line;
+      width: 90%;
     }
 
     .footer {
-      margin-top: 20px;
       font-size: 0.9em;
       text-align: center;
+      margin-top: 20px;
     }
 
     .footer a {
-      color: #333;
+      color: #5c4033;
       text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: color 0.3s, border-color 0.3s;
-      margin: 0 8px;
+      margin: 0 10px;
     }
 
     .footer a:hover {
-      color: #ff9800;
-      border-color: #ff9800;
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2em;
+      }
+
       .instructor-name {
-        font-size: 1.5em;
+        font-size: 2em;
       }
 
       .instructor-title {
-        font-size: 1em;
+        font-size: 1.1em;
       }
 
       .description-box, .biography-text {
-        width: 95%;
-        padding: 12px;
+        font-size: 1em;
       }
     }
   </style>
@@ -113,10 +91,8 @@
   <div class="container">
     <h1>講師紹介</h1>
 
-    <div class="instructor-info">
-      <h2 class="instructor-name">うたみかん<span class="emoji">🍊🎤</span></h2>
-      <p class="instructor-title">ボーカル教室ロマンツァ 代表</p>
-    </div>
+    <div class="instructor-name">うたみかん</div>
+    <div class="instructor-title">ボーカル教室ロマンツァ 代表</div>
 
     <div class="description-box">
       年齢を問わず、どんな方でも気軽にお通いいただけるボーカル教室です。
