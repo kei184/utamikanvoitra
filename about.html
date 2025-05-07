@@ -17,20 +17,23 @@
     body {
       font-family: "Noto Sans JP", sans-serif;
       color: #5c4033;
-      background: url("/utamikanvoitra/images/instructor_background.png") no-repeat center top;
-      background-size: contain;
-      background-color: #fff3eb;
+      background: #fff3eb;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      min-height: 100vh;
     }
 
     .container {
+      position: relative;
       width: 100%;
       max-width: 768px;
+      height: 1152px;
+      background: url("/utamikanvoitra/images/instructor_background.png") no-repeat center top;
+      background-size: contain;
       padding: 40px 20px;
-      text-align: center;
       box-sizing: border-box;
+      text-align: center;
     }
 
     h1 {
@@ -76,6 +79,11 @@
     }
 
     @media (max-width: 600px) {
+      .container {
+        height: auto;
+        background-size: contain;
+      }
+
       h1 {
         font-size: 2.2em;
       }
