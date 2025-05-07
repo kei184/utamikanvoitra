@@ -35,12 +35,15 @@
       text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
+      transform: translateY(-100px);
+      border-radius: 30px;
     }
 
     .instructor-name {
       font-family: "Kiwi Maru", "Noto Sans JP", sans-serif;
       font-size: 5em;
+      font-weight: bold;
       margin: 20px 0 10px;
     }
 
@@ -57,7 +60,7 @@
       border: none;
       text-align: left;
       white-space: pre-line;
-      width: 90%;
+      width: calc(90% - 40px);
     }
 
     .footer {
@@ -81,6 +84,7 @@
         aspect-ratio: auto;
         height: auto;
         background-size: contain;
+        transform: translateY(-60px);
       }
 
       .instructor-name {
@@ -93,7 +97,7 @@
 
       .description-box, .biography-text {
         font-size: 1em;
-        width: 95%;
+        width: calc(95% - 40px);
       }
     }
   </style>
