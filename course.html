@@ -13,12 +13,10 @@
       margin: 0;
       padding: 0;
       height: 100%;
-    }
-
-    body {
       font-family: "Noto Sans JP", sans-serif;
       color: #5c4033;
-      background: #fff3eb;
+      background: #fff3eb url('/utamikanvoitra/images/course_background.png') no-repeat center center;
+      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -29,23 +27,22 @@
       width: 100%;
       max-width: 768px;
       aspect-ratio: 3 / 4.5;
-      background: url("/utamikanvoitra/images/instructor_background.png") no-repeat center center;
-      background-size: contain;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       padding: 40px 20px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      border-radius: 30px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
 
     h1 {
       font-family: "Kiwi Maru", "Noto Sans JP", sans-serif;
       font-size: 2.8em;
-      margin-top: 100px;
+      margin-top: 80px;
       margin-bottom: 40px;
     }
 
@@ -54,12 +51,13 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
+      width: 100%;
     }
 
     .course-item {
-      background-color: #fff;
+      background-color: #ffffff;
       border: 1px solid #ddd;
-      border-radius: 10px;
+      border-radius: 15px;
       text-align: center;
       width: 80%;
       box-sizing: border-box;
@@ -83,6 +81,7 @@
       background-color: #f9f9f9;
       padding: 20px;
       text-align: left;
+      font-size: 1.1em;
     }
 
     .footer {
@@ -102,14 +101,26 @@
     }
 
     @media (max-width: 600px) {
+      body {
+        align-items: flex-start;
+        background-size: contain;
+      }
+
+      .container {
+        border-radius: 20px;
+        padding: 30px 15px;
+        aspect-ratio: auto;
+        margin: 20px;
+      }
+
       h1 {
         font-size: 2em;
-        margin-top: 70px;
+        margin-top: 50px;
         margin-bottom: 20px;
       }
 
       .course-item {
-        width: 90%;
+        width: 100%;
       }
 
       .course-title-area h2 {
@@ -117,12 +128,12 @@
       }
 
       .course-item .content {
-        font-size: 0.9em;
+        font-size: 0.95em;
       }
 
       .footer {
         font-size: 0.8em;
-        margin-top: 20px;
+        margin-top: 30px;
       }
     }
   </style>
