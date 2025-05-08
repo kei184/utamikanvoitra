@@ -21,9 +21,13 @@
       align-items: center;
     }
 
+    body {
+      width: 765px;
+      margin: auto;
+    }
+
     .background-wrapper {
       width: 100%;
-      max-width: 1024px;
       aspect-ratio: 3 / 4.5;
       background: url("/utamikanvoitra/images/course_background.png") no-repeat center center;
       background-size: cover;
@@ -109,6 +113,10 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        width: 100%;
+      }
+
       .background-wrapper {
         max-width: 768px;
       }
