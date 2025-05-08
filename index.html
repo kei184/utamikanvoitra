@@ -17,33 +17,33 @@
     }
 
     .container {
-      position: relative;
       width: 100%;
       max-width: 768px;
-      border-radius: 20px;       /* ◯ コンテナに角丸を追加 */
-      overflow: hidden;          /* ◯ 中の画像や要素がはみ出ないように */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 任意：軽い影 */
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      background-color: #fff3eb;
     }
 
     .header-img {
-      display: block;
       width: 100%;
       height: auto;
+      display: block;
     }
 
     .icon-row {
-      position: absolute;
-      top: 900px;
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
       justify-content: space-between;
       width: 85%;
       max-width: 600px;
       background-color: #fff3eb;
       border-radius: 12px;
-      padding: 10px 0px;
-      box-sizing: border-box;
+      padding: 10px 0;
+      margin-top: 20px;
     }
 
     .icon-link {
@@ -64,9 +64,13 @@
     }
 
     @media (max-width: 600px) {
+      .container {
+        padding: 10px 0;
+      }
+
       .icon-row {
-        top: 445px;
         width: 90%;
+        margin-top: 16px;
       }
 
       .icon-link img {
@@ -83,7 +87,6 @@
 <body>
   <div class="container">
     <img src="romanza_no_icons.png" alt="ボーカル教室ロマンツァ" class="header-img" />
-
     <div class="icon-row">
       <a href="/utamikanvoitra/about" class="icon-link">
         <img src="icon_teacher.png" alt="講師紹介" />
