@@ -5,40 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ボーカル教室ロマンツァ</title>
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      font-family: 'Noto Sans JP', sans-serif;
       background-color: #fce7c1;
+      font-family: 'Noto Sans JP', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
     }
 
-    .background-wrapper {
+    .container {
+      position: relative;
       width: 100%;
       max-width: 768px;
-      aspect-ratio: 3 / 4.5;
-      background: #fff3eb url("romanza_no_icons.png") no-repeat center center;
-      background-size: cover;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      padding-bottom: 30px;
-      box-sizing: border-box;
+      border-radius: 20px;       /* ◯ コンテナに角丸を追加 */
+      overflow: hidden;          /* ◯ 中の画像や要素がはみ出ないように */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 任意：軽い影 */
+    }
+
+    .header-img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .icon-row {
+      position: absolute;
+      top: 900px;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
       justify-content: space-between;
       width: 85%;
       max-width: 600px;
-      background-color: rgba(255, 243, 235, 0.9);
+      background-color: #fff3eb;
       border-radius: 12px;
       padding: 10px 0px;
       box-sizing: border-box;
@@ -62,21 +64,9 @@
     }
 
     @media (max-width: 600px) {
-      body {
-        align-items: flex-start;
-      }
-
-      .background-wrapper {
-        border-radius: 0;
-        aspect-ratio: auto;
-        height: auto;
-        padding: 20px 10px 40px;
-      }
-
       .icon-row {
-        flex-wrap: wrap;
-        width: 95%;
-        margin-top: 20px;
+        top: 445px;
+        width: 90%;
       }
 
       .icon-link img {
@@ -85,13 +75,15 @@
       }
 
       .icon-link {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="background-wrapper">
+  <div class="container">
+    <img src="romanza_no_icons.png" alt="ボーカル教室ロマンツァ" class="header-img" />
+
     <div class="icon-row">
       <a href="/utamikanvoitra/about" class="icon-link">
         <img src="icon_teacher.png" alt="講師紹介" />
