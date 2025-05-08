@@ -23,7 +23,7 @@
 
     .background-wrapper {
       width: 100%;
-      max-width: 768px;
+      max-width: 1024px;
       aspect-ratio: 3 / 4.5;
       background: url("/utamikanvoitra/images/course_background.png") no-repeat center center;
       background-size: cover;
@@ -38,7 +38,7 @@
     .container {
       width: 100%;
       height: 100%;
-      padding: 0px 20px;
+      padding: 40px 40px;
       box-sizing: border-box;
       text-align: center;
       display: flex;
@@ -49,7 +49,9 @@
 
     h1 {
       font-family: "Kiwi Maru", "Noto Sans JP", sans-serif;
-      font-size: 2.8em;
+      font-size: 3em;
+      margin-bottom: 40px;
+      margin-top: 80px;
     }
 
     .course-container {
@@ -57,7 +59,7 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      width: 90%;
+      width: 100%;
     }
 
     .course-item {
@@ -73,18 +75,19 @@
 
     .course-title-area {
       background-color: #ff9800;
+      padding: 15px;
       border-bottom: 1px solid #eee;
     }
 
     .course-title-area h2 {
-      font-size: 1.3em;
+      font-size: 1.6em;
       color: white;
       margin: 0;
     }
 
     .course-item .content {
       background-color: #f9f9f9;
-      padding: 0 20px;
+      padding: 20px;
       text-align: left;
       font-size: 1.1em;
     }
@@ -92,7 +95,7 @@
     .footer {
       font-size: 0.9em;
       text-align: center;
-      margin-top: 50px;
+      margin-top: 60px;
     }
 
     .footer a {
@@ -105,13 +108,18 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      .background-wrapper {
+        max-width: 768px;
+      }
+
       .container {
-        padding: 0px 15px 30px;
+        padding: 30px 20px;
       }
 
       h1 {
-        font-size: 2em;
+        font-size: 2.2em;
+        margin-top: 60px;
       }
 
       .course-item {
@@ -123,12 +131,27 @@
       }
 
       .course-item .content {
-        font-size: 0.95em;
+        font-size: 1em;
       }
 
       .footer {
         font-size: 0.8em;
-        margin-top: 50px;
+        margin-top: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .background-wrapper {
+        aspect-ratio: auto;
+      }
+
+      .container {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-top: 40px;
       }
     }
   </style>
